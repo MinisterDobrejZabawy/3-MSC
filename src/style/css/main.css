@@ -1,0 +1,120 @@
+@charset "UTF-8";
+body {
+  background-color: #000000 !important;
+  overflow: hidden;
+}
+
+/* Kolorystyka */
+/* Tekst */
+/* Przejścia */
+/* Rozmiary */
+/* Czcionki */
+/* Kolorystyka */
+/* Tekst */
+/* Przejścia */
+/* Rozmiary */
+/* Czcionki */
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-image {
+  position: absolute;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  transition: transform 0.5s;
+}
+
+#image1 {
+  background-image: url("/src/assets/img/prlx/prlx-bg2.png");
+  filter: blur(5px);
+}
+
+#image2 {
+  background-image: url("/src/assets/img/prlx/prlx-marie2.png");
+}
+
+#image3 {
+  background-image: url("/src/assets/img/prlx/prlx-tool2.png");
+  filter: blur(5px);
+  margin-left: 30px;
+}
+
+/* Kolorystyka */
+/* Tekst */
+/* Przejścia */
+/* Rozmiary */
+/* Czcionki */
+/* Zmodyfikowany kod SCSS dla lewego menu */
+.navbar {
+  font: bold 14px/1.4 "Open Sans", arial, sans-serif;
+  font-weight: 600;
+  background-color: rgba(13, 12, 15, 0.8196078431) !important;
+  padding: 20px 0;
+}
+.navbar .container {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a {
+  display: flex;
+  align-items: center;
+}
+.navbar img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+.navbar-center-menu {
+  margin: 0;
+  width: 25vw;
+}
+.navbar-center-menu ul.navbar-nav {
+  font-size: 12.5px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.navbar-center-menu ul.navbar-nav .nav-item {
+  text-transform: uppercase;
+  font-weight: lighter;
+  display: flex;
+  list-style-type: none;
+  margin: 0 20px;
+}
+.navbar-center-menu ul.navbar-nav .nav-item .nav-link {
+  position: relative;
+  color: white;
+  transition: color 0.3s;
+  letter-spacing: 0.1em;
+}
+.navbar-center-menu ul.navbar-nav .nav-item .nav-link:hover {
+  color: hsl(49, 100%, 50%);
+}
+.navbar-center-menu ul.navbar-nav .nav-item .nav-link::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: hsl(49, 100%, 50%);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navbar-center-menu ul.navbar-nav .nav-item .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+.navbar-center-menu ul.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}/*# sourceMappingURL=main.css.map */

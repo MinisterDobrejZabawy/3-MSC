@@ -1,0 +1,35 @@
+/* Kolorystyka */
+$bg-dark-purple: #09000c;
+$bg-primary: rgb(13, 16, 21);
+$bg-primary-alpha: #0d0c0f8d;
+$bg-primary-alpha-2: #0d0c0fd1;
+$bg-primary-alpha-3: rgba(0, 0, 0, 0.567);
+$bg-secondary: #0f0f11;
+$bg-neg-primary: white;
+$bg-accent-primary: hsl(49, 100%, 50%);
+$bg-accent-secondary: hsl(41, 100%, 50%);
+$bg-neg-accent: #00bcd4;
+
+/* Tekst */
+$text-primary: white;
+$text-neg-primary: black;
+$text-subtle: rgb(190, 190, 190);
+
+/* Przejścia */
+$transition-super-slow: 1s;
+$transition-slow: 0.5s;
+$transition-moderate: 0.3s;
+$transition-fast: 0.1s;
+$transition-speed: 0.5s;
+
+/* Rozmiary */
+$layout-content-height: 100vh;
+
+/* Czcionki */
+$font-space-mono: 'Space Mono', monospace;
+$font-poppins: 'Poppins', sans-serif;
+$font-roboto-mono: 'Roboto Mono', monospace;
+$font-metrophobic: 'Metrophobic', sans-serif;
+$font-geo: 'Geo', sans-serif;
+$font-nunito-sans: 'Nunito Sans', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
