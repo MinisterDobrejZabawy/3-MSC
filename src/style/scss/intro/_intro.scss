@@ -21,7 +21,7 @@
 
         &-curie {
             filter: brightness(60%) blur(2px);
-            width: 35vw
+            width: 75vh;
         }
     }
 
@@ -33,7 +33,7 @@
         width: 100%;
         color: $bg-accent-primary ;
         text-align: center;
-        font-size: 150px;
+        font-size: 4vw;
         transition: $transition-super-slow ease;
         // text-shadow: $bg-accent-primary 0px 0px 1004px;
 

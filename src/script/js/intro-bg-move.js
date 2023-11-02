@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		const centerX = window.innerWidth / 2;
 		const centerY = window.innerHeight / 2;
 
-		const moveX = (mouseX - centerX) / 500;
-		const moveY = (mouseY - centerY) / 500;
+		const moveX = (mouseX - centerX) / 800;
+		const moveY = (mouseY - centerY) / 800;
 
 		introImgContainer.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
 		introTitle.style.transform = `translate(${moveX}px, ${moveY}px)`;
