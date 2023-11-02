@@ -1,3 +1,5 @@
+@import "./media";
+
 /* Zmodyfikowany kod SCSS dla lewego menu */
 .header {
     position: absolute;
@@ -101,13 +103,15 @@
 
     .social-menu {
         margin-right: 40px;
-        
 
         &-nav {
-            width: 9em;
-
+            width: 12em;
             margin: 0;
-  
+
+            #hamburger-menu {
+                display: none;
+            }
+
             &-item {
                 margin-right: 10px;
                 margin: 0 50px;
@@ -117,7 +121,8 @@
                 margin: 0;
                 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
                 background-color: $bg-neg-primary;
-                transition: $transition-slow ease;;
+                transition: $transition-slow ease;
+
     
                 &-link {
                     color: $text-neg-primary;
@@ -135,12 +140,15 @@
                             color: $text-neg-primary;
                             text-decoration: none;
                         }
+
                     }   
                     
 
-                    #cmd-icon {
+                    #cmd-icon, #menu-icon {
                         font-size: 15px;
                     }
+
+                    
         
                     &::after {
                         border: $bg-accent-primary 1px solid; /* Grubość i kolor obramowania */

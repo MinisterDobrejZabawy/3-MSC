@@ -1,0 +1,42 @@
+/* Dodaj hamburger menu na mniejszych ekranach */
+@media (max-width: 1199px) {
+    .header {
+        .container-fluid {
+            display: none;
+        }
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    display: none;
+                }
+            }
+        }
+
+        #menu-icon {
+            display: block;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background: $bg-primary;
+            width: 100%;
+            top: 60px;
+            left: 0;
+        }
+
+        .nav-item.active {
+            display: flex;
+        }
+
+
+        .lang-nav {
+            display: none;
+        }
+    }
+}
