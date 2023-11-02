@@ -27,13 +27,14 @@
 
     &-title {
         font-family: 'Noto Serif Display', serif;
-        font-weight: 900;
+        font-weight: normal;
+        text-transform: uppercase;
         margin-top: 20%;
         height: 20vh;
         width: 100%;
         color: $bg-accent-primary ;
         text-align: center;
-        font-size: 4vw;
+        font-size: 6vw;
         transition: $transition-super-slow ease;
         // text-shadow: $bg-accent-primary 0px 0px 1004px;
 

@@ -4,6 +4,10 @@
 /* Przejścia */
 /* Rozmiary */
 /* Czcionki */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000000 !important;
   overflow-x: hidden;
@@ -81,13 +85,14 @@ body {
 }
 .intro-title {
   font-family: "Noto Serif Display", serif;
-  font-weight: 900;
+  font-weight: normal;
+  text-transform: uppercase;
   margin-top: 20%;
   height: 20vh;
   width: 100%;
   color: #FFA500;
   text-align: center;
-  font-size: 4vw;
+  font-size: 6vw;
   transition: 2s ease;
 }
 .intro-title-letter {
@@ -168,10 +173,69 @@ body {
   width: 100vw;
   background-color: rgb(13, 16, 21);
 }
+.biography-background {
+  /* Style tła ze zdjęciem, które zajmie całą powierzchnię .biography-container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/src/assets/img/bio/family.png") no-repeat center center;
+  background-size: cover;
+  background-position: 0 10%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: brightness(20%);
+}
+.biography-container {
+  height: 100%;
+  width: 100%;
+}
+.biography-container-text {
+  position: absolute; /* Zmieniamy pozycję na absolutną */
+  height: 100%;
+  width: 50%;
+  left: 100px;
+}
+.biography-container-text-content {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  font-family: "Noto Serif Display", serif;
+  position: relative;
+}
+.biography-container-text-content-title {
+  font-size: 5vw;
+  color: #FFA500;
+  letter-spacing: 10px;
+}
+.biography-container-text-content-subtitle {
+  font-size: 2vw;
+  text-transform: uppercase;
+  color: #FFA500;
+}
+.biography-container-text-content-paragraph {
+  font-size: 1vw;
+  width: 100%;
+  text-align: justify;
+  color: #FFA500;
+}
+.biography-container-image {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.biography-container-image-content {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* Zmodyfikowany kod SCSS dla lewego menu */
 .header {
-  position: fixed;
+  position: absolute;
   z-index: 99999999999999;
   font: bold 14px/1.4 "Open Sans", Arial, sans-serif;
   font-weight: 600;

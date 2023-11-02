@@ -1,15 +1,15 @@
 // Funkcja obsługująca efekt paralaksy na scroll
 function parallaxScroll() {
-	var introSection = document.querySelector('.intro');
-	var introTitle = document.querySelector('.intro-title');
-	var introImage = document.querySelector('.intro-img-container-curie');
-	var backgroundImage = document.querySelector('.background-image');
-	var scrollPosition = window.scrollY;
+	const introSection = document.querySelector('.intro');
+	const introTitle = document.querySelector('.intro-title');
+	const  introImage = document.querySelector('.intro-img-container-curie');
+	const  backgroundImage = document.querySelector('.background-image');
+	const  scrollPosition = window.scrollY;
 
 	// Reguluj prędkość paralaksy dla tytułu, obrazu i tła
-	var titleParallaxSpeed = 0.5;
-	var imageParallaxSpeed = 0.2;
-	var backgroundParallaxSpeed = 0.4;
+	let titleParallaxSpeed = 0.5;
+	let imageParallaxSpeed = 0.2;
+	let backgroundParallaxSpeed = 0.4;
 
 	// Przesuń tytuł i obraz na scroll
 	introTitle.style.transform =
