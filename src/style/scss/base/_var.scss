@@ -6,7 +6,7 @@ $bg-primary-alpha-2: #0d0c0fd1;
 $bg-primary-alpha-3: rgba(0, 0, 0, 0.567);
 $bg-secondary: #0f0f11;
 $bg-neg-primary: white;
-$bg-accent-primary: hsl(0, 100%, 50%);
+$bg-accent-primary:  	 	#FFA500; // hsl(0, 100%, 50%)
 $bg-accent-secondary: hsl(0, 100%, 65%);
 $bg-neg-accent: #00bcd4;
 
@@ -14,9 +14,10 @@ $bg-neg-accent: #00bcd4;
 $text-primary: white;
 $text-neg-primary: black;
 $text-subtle: rgb(190, 190, 190);
+$text-golden: rgb(255, 170, 0);
 
 /* Przejścia */
-$transition-super-slow: 1s;
+$transition-super-slow: 2s;
 $transition-slow: 0.5s;
 $transition-moderate: 0.3s;
 $transition-fast: 0.1s;

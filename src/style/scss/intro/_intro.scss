@@ -1,0 +1,52 @@
+* {
+    &::selection {
+        color: black;
+        background-color: $bg-accent-primary;
+    }
+
+    &:hover {
+        cursor: crosshair;
+    }
+}
+
+.intro {
+    height: 100vh;
+    width: 100vw;
+
+    &-img-container {
+        position: absolute;
+        transform: ranslateY(30px);
+        bottom: 0;
+        animation: slideUp 2s ease; 
+
+        &-curie {
+            filter: brightness(60%) blur(2px);
+            width: 35vw
+        }
+    }
+
+    &-title {
+        font-family: 'Noto Serif Display', serif;
+        font-weight: 900;
+        margin-top: 20%;
+        height: 20vh;
+        width: 100%;
+        color: $bg-accent-primary ;
+        text-align: center;
+        font-size: 150px;
+        transition: $transition-super-slow ease;
+        // text-shadow: $bg-accent-primary 0px 0px 1004px;
+
+        &-letter {
+            margin: 0 5px;
+            transform: rotateY(-90deg);
+            animation: rotate $transition-super-slow ease-in-out forwards;
+
+            @for $i from 1 through 22 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $i * 0.05s; // Przykładowe opóźnienie
+                }
+            }
+        }
+    }
+}

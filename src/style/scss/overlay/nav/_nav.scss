@@ -1,19 +1,20 @@
-@import '../../base/var';
-@import '../../base/keyframes';
-
 /* Zmodyfikowany kod SCSS dla lewego menu */
-.navbar {
+.header {
+    position: fixed;
+    z-index: 99999999999999;
     font: bold 14px/1.4 'Open Sans', Arial, sans-serif;
     font-weight: 600;
-    background-color: transparent; /* Przezroczyste tło */
-    padding: 0; /* Usunięcie paddingu górnego i dolnego */
+    width: 100%;
+    margin-top: 0;
+    animation: slideDown $transition-super-slow ease; 
 
     .container {
         width: 100%;
+        padding: 20px;
     }
 
     a {
-        display: flex;
+
         align-items: center;
     }
 
@@ -23,29 +24,52 @@
         display: block;
     }
 
-    ul.navbar-nav {
-        font-size: 11.5px;
+    .navbar-nav {
+        padding: 0;
+        font-size: 11px;
         list-style-type: none;
         display: flex;
         align-items: center;
         height: 100%; /* Ustawienie wysokości na 100% */
 
         .nav-item {
-            text-transform: uppercase;
+            text-transform: lowerrcase;
             font-weight: lighter;
             display: flex;
             list-style-type: none;
-            margin: 0 20px;
+            margin: 0 10px;
+
+            #quiz {
+                color: $text-golden;
+
+                &::after {
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 1.5px;
+                    left: 0%;
+                    position: absolute;
+                    background: $text-golden;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    left: 0%;
+                }
+            }
 
             .nav-link {
                 position: relative;
-                transition: color 0.3s;
-                display: flex;
-                align-items: center;
+                align-items: left;
                 color: white; /* Biała czcionka */
                 font-weight: lighter;
                 letter-spacing: 0.1em;
-
+                padding: 0;
+                padding-bottom: 2px;
+                transition: all $transition-slow ease;
                 &:hover {
                     color: $bg-accent-primary;
                 }
@@ -55,8 +79,8 @@
                     bottom: 0;
                     content: "";
                     display: block;
-                    height: 1px;
-                    left: 50%;
+                    height: 1.5px;
+                    left: 0%;
                     position: absolute;
                     background: $bg-accent-primary;
                     transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -65,12 +89,124 @@
 
                 &:hover::after {
                     width: 100%;
-                    left: 0;
+                    left: 0%;
                 }
             }
 
             &:last-child {
                 margin-right: 0;
+            }
+        }
+    }
+
+    .social-menu {
+        margin-right: 40px;
+        
+
+        &-nav {
+            width: 9em;
+
+            margin: 0;
+  
+            &-item {
+                margin-right: 10px;
+                margin: 0 50px;
+                height: 40px;
+                width: 35px;
+                padding: 0;
+                margin: 0;
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                background-color: $bg-neg-primary;
+                transition: $transition-slow ease;;
+    
+                &-link {
+                    color: $text-neg-primary;
+                    text-decoration: none;
+                    
+                    i {
+                        font-size: 25px;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        transition: $transition-slow ease;
+                        text-decoration: none;
+
+                        &:link, &:hover, &:active, &:visited {
+                            color: $text-neg-primary;
+                            text-decoration: none;
+                        }
+                    }   
+                    
+
+                    #cmd-icon {
+                        font-size: 15px;
+                    }
+        
+                    &::after {
+                        border: $bg-accent-primary 1px solid; /* Grubość i kolor obramowania */
+                    }
+        
+                }
+
+                &:hover {
+                    transform: rotate(90deg) scale(1.2);
+    
+                    i {
+                        transform: rotate(-90deg) scale(0.9);
+                    }
+                }
+    
+            }
+        }
+    }
+
+    .lang-nav {
+        font-size: 11px;
+        list-style-type: none;
+        padding: 2px;
+        margin: 0;
+        align-items: center;
+        height: 100%; /* Ustawienie wysokości na 100% */
+
+        
+        &-item {
+            text-transform: uppercase;
+            font-weight: lighter;
+            display: flex;
+            list-style-type: none;
+            
+            .lang-nav-link {
+                position: relative;
+                align-items: left;
+                color: $text-subtle; /* Biała czcionka */
+                font-weight: lighter;
+                letter-spacing: 0.1em;
+                margin: 4px;
+                padding-bottom: 2px;
+                transition: all $transition-slow ease;
+
+                &:hover {
+                    color: $bg-accent-primary;
+                    text-decoration: none;
+                }
+
+                &::after {
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    left: 0%;
+                    position: absolute;
+                    background: $bg-accent-primary;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    left: 0%;
+                }
             }
         }
     }

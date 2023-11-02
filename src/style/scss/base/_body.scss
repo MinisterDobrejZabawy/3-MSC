@@ -1,4 +1,7 @@
+@use './var';
+
 body {
     background-color: #000000 !important;
     overflow: hidden;
+    cursor: crosshair;
 }
