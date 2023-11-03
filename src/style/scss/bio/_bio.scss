@@ -1,3 +1,6 @@
+@import './cursor',
+        './sidebrar.';
+
 .biography {
     position: relative;
     height: 100vh;
@@ -11,6 +14,7 @@
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 100;
         background: url('/src/assets/img/bio/family.png') no-repeat center center;
         background-size: cover;
         background-position: 0 10%;

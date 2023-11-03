@@ -8,7 +8,7 @@
     font-weight: 600;
     width: 100%;
     margin-top: 0;
-    animation: slideDown $transition-super-slow ease; 
+    animation: slideDown $transition-super-slow ease;
 
     .container {
         width: 100%;
@@ -32,7 +32,8 @@
         list-style-type: none;
         display: flex;
         align-items: center;
-        height: 100%; /* Ustawienie wysokości na 100% */
+        height: 100%;
+        /* Ustawienie wysokości na 100% */
 
         .nav-item {
             text-transform: lowerrcase;
@@ -66,12 +67,14 @@
             .nav-link {
                 position: relative;
                 align-items: left;
-                color: white; /* Biała czcionka */
+                color: white;
+                /* Biała czcionka */
                 font-weight: lighter;
                 letter-spacing: 0.1em;
                 padding: 0;
                 padding-bottom: 2px;
                 transition: all $transition-slow ease;
+
                 &:hover {
                     color: $bg-accent-primary;
                 }
@@ -123,11 +126,11 @@
                 background-color: $bg-neg-primary;
                 transition: $transition-slow ease;
 
-    
+
                 &-link {
                     color: $text-neg-primary;
                     text-decoration: none;
-                    
+
                     i {
                         font-size: 25px;
                         width: 100%;
@@ -136,34 +139,39 @@
                         transition: $transition-slow ease;
                         text-decoration: none;
 
-                        &:link, &:hover, &:active, &:visited {
+                        &:link,
+                        &:hover,
+                        &:active,
+                        &:visited {
                             color: $text-neg-primary;
                             text-decoration: none;
                         }
 
-                    }   
-                    
+                    }
 
-                    #cmd-icon, #menu-icon {
+
+                    #cmd-icon,
+                    #menu-icon {
                         font-size: 15px;
                     }
 
-                    
-        
+
+
                     &::after {
-                        border: $bg-accent-primary 1px solid; /* Grubość i kolor obramowania */
+                        border: $bg-accent-primary 1px solid;
+                        /* Grubość i kolor obramowania */
                     }
-        
+
                 }
 
                 &:hover {
                     transform: rotate(90deg) scale(1.2);
-    
+
                     i {
                         transform: rotate(-90deg) scale(0.9);
                     }
                 }
-    
+
             }
         }
     }
@@ -174,19 +182,21 @@
         padding: 2px;
         margin: 0;
         align-items: center;
-        height: 100%; /* Ustawienie wysokości na 100% */
+        height: 100%;
+        /* Ustawienie wysokości na 100% */
 
-        
+
         &-item {
             text-transform: uppercase;
             font-weight: lighter;
             display: flex;
             list-style-type: none;
-            
+
             .lang-nav-link {
                 position: relative;
                 align-items: left;
-                color: $text-subtle; /* Biała czcionka */
+                color: $text-subtle;
+                /* Biała czcionka */
                 font-weight: lighter;
                 letter-spacing: 0.1em;
                 margin: 4px;

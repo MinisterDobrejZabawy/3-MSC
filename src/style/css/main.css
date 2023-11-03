@@ -167,6 +167,63 @@ body {
   animation-delay: 1.1s;
 }
 
+.biography-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25vw;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: 0.5s ease;
+}
+.biography-sidebar-container {
+  padding: 20px;
+}
+.biography-sidebar-container-title {
+  color: #FFA500;
+  font-family: "Noto Serif Display", serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.biography-sidebar-container-nav {
+  list-style: cirlce;
+  margin: 0;
+  padding: 0;
+}
+.biography-sidebar-container-nav-item-link {
+  font-family: "Abril Fatface", serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: lighter;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 2s ease;
+}
+.biography-sidebar-container-nav-item-link:hover {
+  color: #FFA500;
+  text-decoration: none;
+}
+.biography-sidebar-container-nav-item-link:hover::after {
+  width: 100%;
+  left: 0%;
+}
+.biography-sidebar-container-nav-item-link::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1.5px;
+  left: 0%;
+  position: absolute;
+  background: #FFA500;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
 .biography {
   position: relative;
   height: 100vh;
@@ -180,6 +237,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 100;
   background: url("/src/assets/img/bio/family.png") no-repeat center center;
   background-size: cover;
   background-position: 0 10%;
@@ -291,7 +349,8 @@ body {
   list-style-type: none;
   display: flex;
   align-items: center;
-  height: 100%; /* Ustawienie wysokości na 100% */
+  height: 100%;
+  /* Ustawienie wysokości na 100% */
 }
 .header .navbar-nav .nav-item {
   text-transform: lowerrcase;
@@ -322,7 +381,8 @@ body {
 .header .navbar-nav .nav-item .nav-link {
   position: relative;
   align-items: left;
-  color: white; /* Biała czcionka */
+  color: white;
+  /* Biała czcionka */
   font-weight: lighter;
   letter-spacing: 0.1em;
   padding: 0;
@@ -388,11 +448,13 @@ body {
   color: black;
   text-decoration: none;
 }
-.header .social-menu-nav-item-link #cmd-icon, .header .social-menu-nav-item-link #menu-icon {
+.header .social-menu-nav-item-link #cmd-icon,
+.header .social-menu-nav-item-link #menu-icon {
   font-size: 15px;
 }
 .header .social-menu-nav-item-link::after {
-  border: #FFA500 1px solid; /* Grubość i kolor obramowania */
+  border: #FFA500 1px solid;
+  /* Grubość i kolor obramowania */
 }
 .header .social-menu-nav-item:hover {
   transform: rotate(90deg) scale(1.2);
@@ -406,7 +468,8 @@ body {
   padding: 2px;
   margin: 0;
   align-items: center;
-  height: 100%; /* Ustawienie wysokości na 100% */
+  height: 100%;
+  /* Ustawienie wysokości na 100% */
 }
 .header .lang-nav-item {
   text-transform: uppercase;
@@ -417,7 +480,8 @@ body {
 .header .lang-nav-item .lang-nav-link {
   position: relative;
   align-items: left;
-  color: rgb(190, 190, 190); /* Biała czcionka */
+  color: rgb(190, 190, 190);
+  /* Biała czcionka */
   font-weight: lighter;
   letter-spacing: 0.1em;
   margin: 4px;

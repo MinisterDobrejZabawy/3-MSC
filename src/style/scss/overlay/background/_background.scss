@@ -9,6 +9,6 @@ img.background-image {
     object-fit: cover;
     filter: brightness(40%) saturate(0);
     animation: fadeIn $transition-slow ease;
-    animation: slideRight 2s ease; 
+    animation: slideRight 2s ease;
     z-index: -9999999;
 }

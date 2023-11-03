@@ -1,0 +1,69 @@
+.biography {
+    &-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 25vw;
+        z-index: 100;
+        transform:  translateX(-100%);
+        transition: $transition-slow ease;
+
+        &-container {
+            padding: 20px; // Dodaj odpowiednie wcięcie lub odstęp
+            // Stylizacja dla .biography-sidebar-container
+
+            &-title {
+                color: $bg-accent-primary;
+                font-family: 'Noto Serif Display', serif;
+                font-size: 30px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+            &-nav {
+                list-style:cirlce;
+                margin: 0;
+                padding: 0;
+
+                &-item {
+
+
+                    &-link {
+                        font-family: $font-abril;
+                        font-size: 40px;
+                        letter-spacing: 5px;
+                        color: $text-primary;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        font-weight: lighter;
+                        position: relative;
+                        padding-bottom: 2px;
+                        transition: all $transition-super-slow ease;
+        
+                        &:hover {
+                            color: $bg-accent-primary;
+                            text-decoration: none;
+                            &::after {
+                                width: 100%;
+                                left: 0%;
+                            }
+                        }
+        
+                        &::after {
+                            background: none repeat scroll 0 0 transparent;
+                            bottom: 0;
+                            content: "";
+                            display: block;
+                            height: 1.5px;
+                            left: 0%;
+                            position: absolute;
+                            background: $bg-accent-primary;
+                            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                            width: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
