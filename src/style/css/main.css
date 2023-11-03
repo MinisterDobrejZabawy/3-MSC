@@ -201,7 +201,7 @@ body {
   font-weight: lighter;
   position: relative;
   padding-bottom: 2px;
-  transition: all 2s ease;
+  transition: all 0.5s ease;
 }
 .biography-sidebar-container-nav-item-link:hover {
   color: #FFA500;
@@ -329,6 +329,7 @@ body {
   font-weight: 600;
   width: 100%;
   margin-top: 0;
+  padding-top: 20px;
   animation: slideDown 2s ease;
 }
 .header .container {

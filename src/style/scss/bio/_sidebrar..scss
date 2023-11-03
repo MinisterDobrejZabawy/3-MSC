@@ -38,7 +38,7 @@
                         font-weight: lighter;
                         position: relative;
                         padding-bottom: 2px;
-                        transition: all $transition-super-slow ease;
+                        transition: all $transition-slow ease;
         
                         &:hover {
                             color: $bg-accent-primary;

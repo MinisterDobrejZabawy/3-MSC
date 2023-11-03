@@ -2,9 +2,9 @@
 function parallaxScroll() {
 	const introSection = document.querySelector('.intro');
 	const introTitle = document.querySelector('.intro-title');
-	const  introImage = document.querySelector('.intro-img-container-curie');
-	const  backgroundImage = document.querySelector('.background-image');
-	const  scrollPosition = window.scrollY;
+	const introImage = document.querySelector('.intro-img-container-curie');
+	const backgroundImage = document.querySelector('.background-image');
+	const scrollPosition = window.scrollY;
 
 	// Reguluj prędkość paralaksy dla tytułu, obrazu i tła
 	let titleParallaxSpeed = 0.5;
