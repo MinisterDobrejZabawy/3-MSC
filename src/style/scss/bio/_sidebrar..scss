@@ -1,4 +1,5 @@
 .biography {
+
     &-sidebar {
         position: fixed;
         left: 0;
@@ -18,6 +19,12 @@
                 font-size: 30px;
                 text-transform: uppercase;
                 letter-spacing: 5px;
+
+                &-letter {
+                    margin: 0 1px;
+                    transform: rotateY(-90deg);
+                    transition: transform 0.3s ease;
+                }
             }
 
             &-nav {

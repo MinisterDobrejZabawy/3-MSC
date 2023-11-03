@@ -186,6 +186,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 5px;
 }
+.biography-sidebar-container-title-letter {
+  margin: 0 1px;
+  transform: rotateY(-90deg);
+  transition: transform 0.3s ease;
+}
 .biography-sidebar-container-nav {
   list-style: cirlce;
   margin: 0;
