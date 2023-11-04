@@ -1,22 +1,36 @@
-// Poczekaj, aż strona zostanie załadowana
 window.addEventListener('load', function() {
-  // Pobierz referencję do elementu sidebar
-  var sidebar = document.querySelector('.biography-sidebar');
-  // Pobierz referencję do elementu .intro-title
-  var introTitle = document.querySelector('.intro-title');
-  
-  // Oblicz wartość przesunięcia na podstawie pozycji .intro-title
-  var offset = introTitle.getBoundingClientRect().bottom;
-  
-  // Dodaj nasłuchiwanie na zdarzenie przewijania strony
+  const sidebar = document.querySelector('.biography-sidebar');
+  const introTitle = document.querySelector('.intro-title');
+  const biographyContainer = document.querySelector('.biography-container');
+
+  const offset = introTitle.getBoundingClientRect().bottom;
+
+  let biographyVisible = false;
+
   window.addEventListener('scroll', function() {
-    // Sprawdź, czy .intro-title został przewinięty całkowicie poza ekranem
     if (introTitle.getBoundingClientRect().bottom <= 0) {
-      // Jeśli tak, pokaż sidebar, przesuwając go z powrotem
       sidebar.style.transform = 'translateX(0)';
     } else {
-      // W przeciwnym razie ukryj go
       sidebar.style.transform = 'translateX(-100%)';
     }
+
+    if (!biographyVisible && biographyContainer.getBoundingClientRect().top <= window.innerHeight * 0.75) {
+      biographyVisible = true;
+      animateBiographyIn();
+    }
   });
-})
+
+  function animateBiographyIn() {
+    let opacity = 0;
+    let translateY = 20;
+    const interval = setInterval(function() {
+      opacity += 0.05;
+      translateY -= 1;
+      biographyContainer.style.opacity = opacity;
+      biographyContainer.style.transform = 'translateY(' + translateY + 'px)';
+      if (opacity >= 1) {
+        clearInterval(interval);
+      }
+    }, 30);
+  }
+});
