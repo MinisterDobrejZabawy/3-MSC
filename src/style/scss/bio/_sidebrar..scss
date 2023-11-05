@@ -4,7 +4,7 @@
         position: fixed;
         left: 0;
         top: 0;
-        width: 20vw;
+        width: 25vw;
         z-index: 100;
         transform:  translateX(-100%);
         transition: $transition-slow ease;
@@ -37,7 +37,7 @@
 
                     &-link {
                         font-family: $font-abril;
-                        font-size:20px;
+                        font-size:30px;
                         letter-spacing: 5px;
                         color: $text-primary;
                         text-transform: uppercase;
