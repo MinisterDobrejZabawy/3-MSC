@@ -333,6 +333,9 @@ body {
   .header .lang-nav {
     display: none;
   }
+  .header .social-menu {
+    display: none;
+  }
   .header #github, .header #cmd {
     display: none;
   }
@@ -362,7 +365,7 @@ body {
 }
 .header .navbar-nav {
   padding: 0;
-  font-size: 11px;
+  font-size: 13px;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -425,6 +428,9 @@ body {
   width: 100%;
   left: 0%;
 }
+.header .navbar-nav .nav-item .sub-item {
+  color: rgb(194, 194, 194);
+}
 .header .navbar-nav .nav-item:last-child {
   margin-right: 0;
 }
@@ -432,7 +438,7 @@ body {
   margin-right: 40px;
 }
 .header .social-menu-nav {
-  width: 12em;
+  width: 9em;
   margin: 0;
 }
 .header .social-menu-nav #menu {
@@ -497,7 +503,7 @@ body {
 .header .lang-nav-item .lang-nav-link {
   position: relative;
   align-items: left;
-  color: rgb(190, 190, 190);
+  color: rgb(194, 194, 194);
   /* Biała czcionka */
   font-weight: lighter;
   letter-spacing: 0.1em;
